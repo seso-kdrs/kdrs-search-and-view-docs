@@ -1,15 +1,14 @@
 ---
 layout: xml
-title: showsearch
+title: search
 parent: xml
 ---
 A table will be searchable by default.\
 If you want to turn this off, you can set this value to false.
 
-
 {% highlight xml %}
     <table>
-        <showsearch>false</showsearch>
+        <search>false</search>
 {% endhighlight %}
 
 `Tip` Use this for reports, to get a more compact and printer friendly output.
