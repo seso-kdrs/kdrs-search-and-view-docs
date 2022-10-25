@@ -20,6 +20,4 @@ Example: Include all buildings that have the name `school`
         <filter>name:"school"</filter>        
 {% endhighlight %}
 
-
-
 Currently multiple lines of filtering is not supported. Please use `&&`, `||` to combine values.
