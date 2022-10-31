@@ -20,6 +20,8 @@ url: "https://just-the-docs.github.io" # the base hostname & protocol for your s
 
 permalink: pretty
 
+remote_theme: just-the-docs
+
 # defaults:
 # - scope:
 #     path: "docs/xml"
