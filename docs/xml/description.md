@@ -3,8 +3,7 @@ layout: xml
 title: description
 parent: xml
 ---
-Description describes this configuration file. Which system does it support?
-
+Description describes this configuration file. Which system does it support? 
 {% highlight xml %}
 <root>
     <meta>

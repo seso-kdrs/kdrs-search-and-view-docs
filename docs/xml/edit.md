@@ -3,7 +3,7 @@ layout: xml
 title: edit
 parent: xml
 ---
-Field values can be edited by using this tag. Any ruby function can be used, as long as its on the format field.ruby_method or field[0..3] etc. The edits will be done in the final table, after all the lookups (joins). Multiple methods can be chained, if needed.
+Field values can be edited by using this tag. Any ruby function can be used, as long as its on the format field.ruby_method or field[0..3] etc. The edits will be done in the final table, after all the lookups (joins). Multiple methods can be chained, if needed. Sorting will be done after the edits.
 
 Example:
 {% highlight xml %}
