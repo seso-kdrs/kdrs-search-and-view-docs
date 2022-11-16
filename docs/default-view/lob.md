@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: lob
-parent: Standard View
+parent: Default View
 ---
 Inline lobs will be displayed automatically.\
 External lobs must be specified as shown in the example.

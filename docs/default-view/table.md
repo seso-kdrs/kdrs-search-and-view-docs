@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: table
-parent: Standard View
+parent: Default View
 ---
 Marks the beginning of a new table configuration.\
 Other fields must preceed this field as shown.

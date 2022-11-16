@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: rows
-parent: Standard View
+parent: Default View
 ---
 Default number of rows is 20. Use this tag to change the default for this view.
 

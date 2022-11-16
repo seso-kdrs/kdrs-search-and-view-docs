@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: footer
-parent: Standard View
+parent: Default View
 ---
 If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header or a footer. 
 

@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: export
-parent: Standard View
+parent: Default View
 ---
 Places a button in the view called `Send`, that will show different options.\
 Currently the available option is `Print`.

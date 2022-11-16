@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: heading
-parent: Standard View
+parent: Default View
 ---
 Creates a heading for the table
 {% highlight xml %}

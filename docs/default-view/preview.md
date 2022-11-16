@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: preview
-parent: Standard View
+parent: Default View
 ---
 Shows a preview of the data.\
 This is typically used if the number of choices are few, and the user does not need to search for the data.\

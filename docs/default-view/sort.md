@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: sort
-parent: Standard View
+parent: Default View
 ---
 Sort table based on the given column. If the values seem to be integers, the sort will be numeric. If not they will sort as string.
 

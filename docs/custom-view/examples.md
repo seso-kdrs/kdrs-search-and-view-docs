@@ -16,11 +16,12 @@ These are som frequently used code snippets for the custom view.
 
 
 # Display the main table
-The `@docs` variable from xml will be written to screen in standard table format.
+By using this one line, the `@docs` variable from xml will be written to screen in standard table format. This is the simplest view you can make, and will be similar to the built in view.
+
 {% highlight erb %}
 <%= render 'table', vi: @vi, ti: @ti %>
 {% endhighlight %}
 
-`@vi` (view index) and `@ti` (table index) provides the user context, and is automatically fetched from the url.
+`@vi` view index and `@ti` table index provides the user context. It is automatically fetched from the current url.
 
 

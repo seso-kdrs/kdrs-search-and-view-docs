@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: customview
-parent: Standard View
+parent: Default View
 ---
 You can make a custom view if you want advanced layout or features.
 Make a file e.g. `views/_schoolsys_diploma.html.erb`

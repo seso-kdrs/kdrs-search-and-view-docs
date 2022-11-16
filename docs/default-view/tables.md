@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: tables
-parent: Standard View
+parent: Default View
 ---
 Group all the tables
 

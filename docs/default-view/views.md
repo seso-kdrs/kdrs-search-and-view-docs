@@ -1,9 +1,9 @@
 ---
 layout: xml
-title: view
-parent: Standard View
+title: views
+parent: Default View
 ---
-Marks the beginning av a new view. A view has a name and one or more tables.
+Group all the views
 
 Example:
 {% highlight xml %}

@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: search
-parent: Standard View
+parent: Default View
 ---
 A table will be searchable by default.\
 If you want to turn this off, you can set this value to false.

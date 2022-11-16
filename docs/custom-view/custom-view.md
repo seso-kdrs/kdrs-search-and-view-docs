@@ -16,7 +16,7 @@ KDRS Innsyn can be extended for advanced data manipulation and presentation. Som
 {:toc}
 
 # Make a new file for the view
-In your hosts `view` directory, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the ruby server will process the file first, then the html engine.
+In the `views` directory on your host, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the ruby server will process the file first, then the html engine.
 
 {% highlight bash %}
 /var/kdrs/innsyn/views/schoolsys/_diploma.html.erb
@@ -54,7 +54,7 @@ You can write plain html in this file
 {% endhighlight %}
 
 # ERB - Embedded Ruby
-You can write plain Ruby in this file
+You can write plain Ruby in this file, as long as you use the brackets.
 {% highlight erb %}
     <% Ruby here %>
 {% endhighlight %}
