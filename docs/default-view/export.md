@@ -3,8 +3,8 @@ layout: xml
 title: export
 parent: Default View
 ---
-Places a button in the view called `Send`, that will show different options.\
-Currently the available option is `Print`.
+Places a button in the view for easy printing. In the future we may provide a menu with multiple options.
+
 {% highlight xml %}
     <table>
         <export>true</export>
