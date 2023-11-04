@@ -72,11 +72,12 @@ You can manipulate data in the background, or do some fancy things with the html
 
 
 # CSS
+You can style your data with css, or adjust margins
 {% highlight html %}
-<script>    
+<style>    
     // background-color: lightgray; 
     // vscode editor will suggest possible options here
-</script>
+</style>
 {% endhighlight %}
 
 Note: You can use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and community sharing.
