@@ -75,8 +75,12 @@ You can manipulate data in the background, or do some fancy things with the html
 You can style your data with css, or adjust margins
 {% highlight html %}
 <style>    
-    // background-color: lightgray; 
-    // vscode editor will suggest possible options here
+  .my-style {
+    background-color: lightgray;
+    font-size: larger;
+    /* vscode editor will help suggest what to write here */
+    /* you can also use chatgpt to write css */
+  }
 </style>
 {% endhighlight %}
 
