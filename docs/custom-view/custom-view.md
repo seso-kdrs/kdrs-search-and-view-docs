@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/custom-view
 ---
 # Custom View
-KDRS Innsyn can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use custom views for the advanced stuff. This allows for readability in the community.
+KDRS Search & View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use custom views for the advanced stuff. This allows for readability in the community.
 {: .fs-6 .fw-300 }
 
 # Table of Contents
@@ -33,16 +33,18 @@ The program flow will be redirected to this view. You will be in control of the 
 # Minimum template
 
 {% highlight erb %}
-<!-- diploma 1.0.0 -->
 <!-- DATA PREPARATION -->
-<% adjust the @docs or other data if needed, in Ruby %>
+<% 
+    # Your data will be in the @docs variable
+    # Adjust your data as needed before presentation
+%>
 
 <!-- DATA PRESENTATION -->
 <%= render 'table', vi: @vi, ti: @ti %>
 {% endhighlight %}
 
-This view template will generate the same view as the internal template.
-The difference is that you can manipulate the data as needed, and change the presentation with new styling, headings, extra text, tables etc. Maybe you want some different layout on print. This you can change from here.
+This view template will generate the same view as the default template.
+The difference is that you can manipulate the data as needed, and change the presentation with new styling, headings, extra text, tables etc. Maybe you want some different layout on print. This and more you can change from here.
 
 # Data
 The data from xml will be available to the view in the `@docs` variable. If you need more data from other tables, you can fetch those here. See the examples for how this is done.
@@ -69,12 +71,13 @@ You can manipulate data in the background, or do some fancy things with the html
 {% endhighlight %}
 
 
-# Javascript
-You can use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and community sharing.
+# CSS
 {% highlight html %}
-<script>
-    // Javascript here, if needed.
+<script>    
+    // background-color: lightgray; 
+    // vscode editor will suggest possible options here
 </script>
 {% endhighlight %}
 
+Note: You can use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and community sharing.
 
