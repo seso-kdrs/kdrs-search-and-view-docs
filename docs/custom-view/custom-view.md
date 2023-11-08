@@ -16,7 +16,7 @@ KDRS Search & View can be extended for advanced data manipulation and presentati
 {:toc}
 
 # Make a new file for the view
-In the `views` directory on your host, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the ruby server will process the file first, then the html engine.
+In the `vendor/your_system/` directory on your host, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the ruby server will process the file first, then the html engine.
 
 {% highlight bash %}
 /var/kdrs/innsyn/vendor/school_system/_diploma.html.erb
