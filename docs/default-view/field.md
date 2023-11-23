@@ -10,7 +10,8 @@ Specifies one field to be edited
         <name>cities</name>
         <fields>name,date</fields>
         <edit>
-            <field>name.capitalize</field>
+            <field>name.capitalize</field> <!-- Like this -->
+            <field>name.titleize</field> <!-- Like This -->
             <field>date[0..9]</field>
         </edit>
     </table>
