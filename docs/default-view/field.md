@@ -5,6 +5,8 @@ parent: Default View
 ---
 Specifies one field to be edited
 
+Example:
+
 {% highlight xml %}
     <table>
         <name>cities</name>
@@ -16,3 +18,5 @@ Specifies one field to be edited
         </edit>
     </table>
 {% endhighlight %}
+
+You can use any Ruby string method here
