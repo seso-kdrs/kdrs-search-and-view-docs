@@ -77,7 +77,6 @@ DEPENDENCIES
   bundler (~> 2.3.5)
   jekyll-watch
   just-the-docs!
-  liquid (>= 4.0.4)
   webrick (~> 1.7)
 
 BUNDLED WITH
