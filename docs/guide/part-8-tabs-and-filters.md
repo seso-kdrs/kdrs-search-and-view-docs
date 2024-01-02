@@ -76,4 +76,6 @@ Now we can see a new tab appear, which will also list every film.\
 ...
 {% endhighlight %}
 
-Our new table now only contains films that are 60 minutes or less!
+Our new table now only contains films that are 60 minutes or less!\
+<br>
+![](../../../assets/images/guide/table-6.png)
