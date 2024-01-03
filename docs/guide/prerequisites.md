@@ -9,6 +9,8 @@ parent: Guide
 Before starting this guide, you will need the following:
 
 1. Access to a server running KDRS Innsyn.
+    - KDRS Innsyn website access.
+    - SSH/FTP access (or another method to edit files on the Linux server).
 2. The example Sakila SIARD-dataset. In this guide we will be making templates for this dataset.
 
 [Download sakila.siard](../../../assets/files/sakila.siard){: .btn }

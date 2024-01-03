@@ -36,11 +36,11 @@ Password: `admin`
 <br>
 ![](../../../assets/images/guide/nytt-firma-ok.png)
 
-8. Now we can set up an account for an archivist. Archivists have permissions to create new catalogs. Navigate to "Brukere" in the navigation meny and click "Ny bruker".
+8. Now we can set up an account for an archivist. Archivists have permissions to create new catalogs. Navigate to "Brukere" in the navigation meny and click "Ny bruker".\
 <br>
 ![](../../../assets/images/guide/ny-bruker.png)
 
-9. Fill out all the fields, select the archive you made for "Firma" and select the checkbox for "Arkivar", before clicking "OK" to create the new account.
+9. Fill out all the fields, select the archive you made for "Firma" and select the checkbox for "Arkivar", before clicking "OK" to create the new account.\
 <br>
 ![](../../../assets/images/guide/ny-bruker-ok.png)
 
