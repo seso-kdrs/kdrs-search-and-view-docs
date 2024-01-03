@@ -14,7 +14,7 @@ The following image shows a schema of all the tables in our database:\
 The table *film* looks interesting, so we will click that to view it:\
 <br>
 ![](../../../assets/images/guide/dbptk-film-table.png)
-<br>
+<br><br>
 Our first task will be to show the title and description of every film in a table.
 <br>
 1. To do this, we have to start by defining a new table for our view. We do this by adding a [`<tables>`](../../default-view/tables) tag containing one [`<table>`](../../default-view/table) tag in our XML template:

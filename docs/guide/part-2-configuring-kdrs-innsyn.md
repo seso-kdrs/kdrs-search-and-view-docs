@@ -8,7 +8,7 @@ Now we will log into KDRS innsyn and setup a company (archive) and an account to
 
 1. By default only the admin account exists. Log into the admin account by clicking OK after entering the default credentials:\
 E-mail:   `admin@kdrs.no`\
-Password: `admin`
+Password: `admin`\
 <br>
 ![KDRS Innsyn login interface with "OK" highlighted](../../../assets/images/guide/admin-login.png)
 
