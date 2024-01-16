@@ -7,18 +7,18 @@ on:
     types:
       - published
 env:
-  kdrsInnsynDocVersionPath: /_site
+  kdrsInnsynDocVersionPath: /publish
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Update kdrsInnsynDocVersionPath for releases
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: echo kdrsInnsynDocVersionPath=_site/version/$(echo $GITHUB_REF | cut -d / -f 3 | cut -d v -f 2- | cut -d . -f 1,2)/ >> $GITHUB_ENV
+        run: echo kdrsInnsynDocVersionPath=publish/version/$(echo $GITHUB_REF | cut -d / -f 3 | cut -d v -f 2- | cut -d . -f 1,2)/ >> $GITHUB_ENV
 
       - name: Update kdrsInnsynDocVersionPath for non-main branches
         if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
-        run: echo kdrsInnsynDocVersionPath=_site/preview/ >> $GITHUB_ENV
+        run: echo kdrsInnsynDocVersionPath=publish/preview/ >> $GITHUB_ENV
 
       - name: Checkout 🛎️
         uses: actions/checkout@v3
