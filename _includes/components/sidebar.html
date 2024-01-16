@@ -16,7 +16,7 @@
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </button>
   </div>
-
+  {% include components/version_selector.html %}
   {% include_cached components/site_nav.html %}
 
   {% capture nav_footer_custom %}
@@ -30,3 +30,5 @@
     </footer>
   {% endif %}
 </div>
+
+
