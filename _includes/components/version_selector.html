@@ -1,5 +1,7 @@
-<select id="versionSelector"></select>
-
+<span style="margin: 1rem 1rem 0rem 0rem">
+    Version:
+    <select style="width: 10rem" id="versionSelector"></select>
+</span>
 <script>  
     const versionSelector = document.getElementById("versionSelector");
     console.log("JS");
@@ -7,6 +9,7 @@
     (async function() {
       await loadVersionsFromStorageOrGithub();
     })();
+    this.options = [{value: "abc", text: "abc"}, {value: "abc", text: "abc"},{value: "abc", text: "abc"}];
     console.log(this.options);
     buildVersionSelect();
 
@@ -59,7 +62,7 @@
             var option = document.createElement("option");
 
             option.value = version.value;
-            option.textContent = version.text;
+            option.textContent = version.text == "master" ? "latest" : version.text;
             versionSelector.appendChild(option);
         });
     }
@@ -72,10 +75,11 @@
         const targetVersionPath = this.selected === 'master' ? '' : `/version/${this.selected}`;
         const path = window.location.pathname.toLowerCase();
         const baseUrlLength = "{{site.baseurl}}".length;
+        console.log("BaseUrlLength: " + baseUrlLength);
         let startIdx = baseUrlLength;
         const versionIdx = path.indexOf('/version/');
         if (versionIdx >= 0) {
-        startIdx = versionIdx + baseUrlLength;
+        startIdx = versionIdx + '/version/'.length;
         }
         const endIdx = path.indexOf('/', startIdx);
         
