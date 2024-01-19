@@ -28,6 +28,7 @@ jobs:
 
       - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite baseurl with version
         run: |
+          echo '' >> _config.yml
           echo 'baseurl: ${{env.baseurl}}${{env.kdrsInnsynDocVersionPath}}' >> _config.yml
 
       - name: Build with Jekyll
