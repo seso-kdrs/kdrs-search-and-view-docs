@@ -5,9 +5,8 @@
 <script>  
     const versionSelector = document.getElementById("versionSelector");
 
-    (async function() {
-        this.options = [{value: "master", text: "latest"}, {value: "a.b.c", text: "a.b.c"}, {value:"x.y.z", text:"x.y.z"}];
-         /* await loadVersionsFromStorageOrGithub(); */
+    (async function() {       
+         await loadVersionsFromStorageOrGithub();
     })().then(() => {
         buildVersionSelect();
     });
