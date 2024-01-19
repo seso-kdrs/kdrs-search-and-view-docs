@@ -9,27 +9,33 @@ on:
 permissions:
   contents: write
 env:
-  kdrsInnsynDocVersionPath: ./
+  kdrsInnsynDocVersionPath: /
+  baseurl: /test-kdrs-innsyn-docs
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Update kdrsInnsynDocVersionPath for releases
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: echo kdrsInnsynDocVersionPath=./version/$(echo $GITHUB_REF | cut -d / -f 3 | cut -d v -f 2- | cut -d . -f 1,2)/ >> $GITHUB_ENV
+        run: echo kdrsInnsynDocVersionPath=/version/$(echo $GITHUB_REF | cut -d / -f 3 | cut -d v -f 2- | cut -d . -f 1,2) >> $GITHUB_ENV
 
-      - name: Update kdrsInnsynDocVersionPath for non-main branches
-        if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
-        run: echo kdrsInnsynDocVersionPath=./preview/ >> $GITHUB_ENV
+      # - name: Update kdrsInnsynDocVersionPath for non-main branches
+      #   if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
+      #   run: echo kdrsInnsynDocVersionPath=/preview >> $GITHUB_ENV
 
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
+      - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite baseurl with version
+        run: |
+          echo 'baseurl: ${{env.baseurl}}${{env.kdrsInnsynDocVersionPath}}' >> _config.yml
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
