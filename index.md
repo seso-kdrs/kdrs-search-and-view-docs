@@ -6,8 +6,6 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 permalink: /
 ---
 
-CI test: x.y.z-patch-b
-
 # KDRS Search & View
 {: .fs-9 }
 
