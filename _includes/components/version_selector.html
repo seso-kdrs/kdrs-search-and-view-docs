@@ -90,7 +90,16 @@
         this.selected = versionSelector.value;
         const targetVersionPath = this.selected === 'master' ? '' : `/version/${this.selected}`;
         const path = window.location.pathname.toLowerCase();
-        const baseUrlLength = "{{site.baseurl}}".length;
+        /* baseUrl might contain version number. If so, remove it. */
+        let baseUrl = "{{site.baseurl}}"; 
+        let secondSlashIndex = baseUrl.indexOf("/", 1);
+        if(secondSlashIndex > 0) {
+            baseUrl = baseUrl.substring(0, secondSlashIndex);
+        }
+        let baseUrlLength = baseUrl.length;
+        /*if ("{{site.baseurl}}".endsWith("/")) {
+            baseUrlLength -= 1;
+        }*/
         console.log("BaseUrlLength: " + baseUrlLength);
         let startIdx = baseUrlLength;
         const versionIdx = path.indexOf('/version/');
@@ -104,6 +113,6 @@
         window.location.pathname.substring(endIdx);
         console.log(`Navigating to: '${newPath}'`);
 
-        window.location.pathname = newPath;        
+        window.location.pathname = newPath;
     });
     </script>
