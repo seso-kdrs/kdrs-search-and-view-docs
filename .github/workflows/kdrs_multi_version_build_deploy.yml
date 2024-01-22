@@ -29,7 +29,7 @@ jobs:
       - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite baseurl with version
         run: |
           echo '' >> _config.yml
-          echo baseurl: $(echo '${{env.baseurl}}' | cut -d / -f 2)${{env.kdrsInnsynDocVersionPath}} >> _config.yml
+          echo baseurl: $(echo '${{env.baseurl}}' | cut -d / -f 1,2)${{env.kdrsInnsynDocVersionPath}} >> _config.yml
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
