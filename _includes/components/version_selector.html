@@ -15,50 +15,47 @@
 
     async function loadVersionsFromStorageOrGithub() {
         try {
-        let versions;
-        const versionsStr = sessionStorage.getItem('versions');
-        if (versionsStr) {
-            try {
-            versions = JSON.parse(versionsStr);
-            } catch (ex) {}
-        }
-        if (!versions) {
-            let res = await (await fetch('https://api.github.com/repos/{{site.repository}}/git/trees/gh-pages')).json();
-            console.log("res:");
-            console.log(res);
-            var versionNode = res.tree.find(e => {
-            return e.path.toLowerCase() === 'version';
-            });
-            console.log("VersionNode: " + versionNode);
-            res = await (await fetch(versionNode.url)).json();
-            versions = res.tree.map(e => {
-            return {value: e.path, text: e.path};
-            });
-            versions.sort((e1, e2) => {
-            const e1Arr = e1.text.split('.');
-            const e2Arr = e2.text.split('.');
-            for (let i = 0; i < e1Arr.length && i < e2Arr.length; i++) {
-                const e1V = parseInt(e1Arr[i]);
-                const e2V = parseInt(e2Arr[i]);
-                if (e1V !== e2V) return e2V - e1V;
-                if (e1Arr[i] !== e2Arr[i]) return e2Arr[i] - e1Arr[i];
+            let versions;
+            const versionsStr = sessionStorage.getItem('versions');
+            if (versionsStr) {
+                try {
+                versions = JSON.parse(versionsStr);
+                } catch (ex) {}
             }
-            return e1.text === e2.text ? 0 : e2.text < e1.text ? -1 : 1;
-            });
-            versions.unshift({value: 'master', text: 'master'});
-            sessionStorage.setItem('versions', JSON.stringify(versions));
-        }
-        this.options = versions;
-        const path = window.location.pathname.toLowerCase();
-        if (path.startsWith('/{{repoowner}}/version/')) {
-            const start = 18;
-            const end = path.indexOf('/', start);
-            this.selected = path.substring(start, end);
-        } else {
-            this.selected = 'master';
-        }
+            if (!versions) {
+                let res = await (await fetch('https://api.github.com/repos/{{site.repository}}/git/trees/gh-pages')).json();
+                var versionNode = res.tree.find(e => {
+                return e.path.toLowerCase() === 'version';
+                });
+                res = await (await fetch(versionNode.url)).json();
+                versions = res.tree.map(e => {
+                return {value: e.path, text: e.path};
+                });
+                versions.sort((e1, e2) => {
+                const e1Arr = e1.text.split('.');
+                const e2Arr = e2.text.split('.');
+                for (let i = 0; i < e1Arr.length && i < e2Arr.length; i++) {
+                    const e1V = parseInt(e1Arr[i]);
+                    const e2V = parseInt(e2Arr[i]);
+                    if (e1V !== e2V) return e2V - e1V;
+                    if (e1Arr[i] !== e2Arr[i]) return e2Arr[i] - e1Arr[i];
+                }
+                return e1.text === e2.text ? 0 : e2.text < e1.text ? -1 : 1;
+                });
+                versions.unshift({value: 'master', text: 'master'});
+                sessionStorage.setItem('versions', JSON.stringify(versions));
+            }
+            this.options = versions;
+            const path = window.location.pathname.toLowerCase();
+            if (path.startsWith('/{{repoowner}}/version/')) {
+                const start = 18;
+                const end = path.indexOf('/', start);
+                this.selected = path.substring(start, end);
+            } else {
+                this.selected = 'master';
+            }
         } catch (ex) {
-            console.log(ex)
+            console.error(ex)
         }
     }
     function getCurrentVersion() {
@@ -96,10 +93,7 @@
             baseUrl = baseUrl.substring(0, secondSlashIndex);
         }
         let baseUrlLength = baseUrl.length;
-        /*if ("{{site.baseurl}}".endsWith("/")) {
-            baseUrlLength -= 1;
-        }*/
-        console.log("BaseUrlLength: " + baseUrlLength);
+
         let startIdx = baseUrlLength;
         const versionIdx = path.indexOf('/version/');
         if (versionIdx >= 0) {
@@ -110,7 +104,6 @@
         const newPath = window.location.pathname.substring(0, baseUrlLength) +
         targetVersionPath +
         window.location.pathname.substring(endIdx);
-        console.log(`Navigating to: '${newPath}'`);
 
         window.location.pathname = newPath;
     });
