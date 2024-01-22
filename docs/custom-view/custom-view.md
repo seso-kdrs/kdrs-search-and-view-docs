@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Custom View
+title: Ruby Template
 nav_order: 3
 has_children: true
 permalink: /docs/custom-view
 ---
-# Custom View
+# Ruby Template
 KDRS Search & View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use custom views for the advanced stuff. This allows for readability in the community.
 {: .fs-6 .fw-300 }
 

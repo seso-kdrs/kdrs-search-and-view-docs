@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: meta
-parent: Default View
+parent: XML Template
 ---
 Meta section is for information about the configuration.
 

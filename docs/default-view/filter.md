@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: filter
-parent: Default View
+parent: XML Template
 ---
 Data can be filtered. This will be sent as query to the database. \
 solr syntax can be used, but use human display names for the fields. \
