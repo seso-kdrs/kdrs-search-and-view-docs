@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: foreignkey
-parent: XML Template
+parent: Default View
 ---
 If this is a child table, this key will match against the primary key of the parent table. This key is not needed for parent tables.
 {% highlight xml %}

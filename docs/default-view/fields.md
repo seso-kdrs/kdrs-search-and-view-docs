@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: fields
-parent: XML Template
+parent: Default View
 ---
 Select which fields will be disiplayed from the table
 {% highlight xml %}

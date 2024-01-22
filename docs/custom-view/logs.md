@@ -1,7 +1,7 @@
 ---
 layout: default
 title: logs
-parent: Ruby Template
+parent: Custom View
 ---
 
 # Logs

@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: export
-parent: XML Template
+parent: Default View
 ---
 Places a button in the view for easy printing. In the future we may provide a menu with multiple options.
 

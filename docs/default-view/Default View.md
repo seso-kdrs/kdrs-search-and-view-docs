@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XML Template
+title: Default View
 nav_order: 2
 has_children: true
 permalink: /docs/xml

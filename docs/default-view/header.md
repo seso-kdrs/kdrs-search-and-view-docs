@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: header
-parent: XML Template
+parent: Default View
 ---
 If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header above the table. 
 

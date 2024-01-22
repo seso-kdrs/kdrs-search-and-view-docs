@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: view
-parent: XML Template
+parent: Default View
 ---
 Marks the beginning av a new view. A view has a name and one or more tables.
 

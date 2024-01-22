@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: description
-parent: XML Template
+parent: Default View
 ---
 Description describes this configuration file. Which system does it support? 
 {% highlight xml %}

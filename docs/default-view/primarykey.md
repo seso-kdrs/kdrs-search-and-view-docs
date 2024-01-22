@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: primarykey
-parent: XML Template
+parent: Default View
 ---
 The primary key for this table
 {% highlight xml %}

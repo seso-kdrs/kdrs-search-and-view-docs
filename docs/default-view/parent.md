@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: parent
-parent: XML Template
+parent: Default View
 ---
 The table name of a parent table. This will make this table a child table, and they will be linked. Parents primary key will match the childs foreign key.
 

@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: root
-parent: XML Template
+parent: Default View
 ---
 All configuration files start with `<root>` and ends with `</root>` 
 
