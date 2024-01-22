@@ -4,14 +4,13 @@
 </span>
 <script>  
     const versionSelector = document.getElementById("versionSelector");
+    this.options = [{ value: "master", text: "master" }];
 
     (async function() {       
          await loadVersionsFromStorageOrGithub();
     })().then(() => {
         buildVersionSelect();
     });
-    
-    console.log("Options: ", this.options);
 
 
     async function loadVersionsFromStorageOrGithub() {
