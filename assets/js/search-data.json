@@ -1,13 +1,13 @@
 {"0": {
-    "doc": "XML Template",
+    "doc": "Default View",
     "title": "View Configuration",
     "content": "KDRS Search &amp; View can be configured using XML. The currently available tags are described in this section. ",
     "url": "/test-kdrs-innsyn-docs/docs/xml#view-configuration",
     
     "relUrl": "/docs/xml#view-configuration"
   },"1": {
-    "doc": "XML Template",
-    "title": "XML Template",
+    "doc": "Default View",
+    "title": "Default View",
     "content": " ",
     "url": "/test-kdrs-innsyn-docs/docs/xml",
     
@@ -27,63 +27,63 @@
     
     "relUrl": "/docs/guide"
   },"4": {
-    "doc": "Ruby Template",
-    "title": "Ruby Template",
+    "doc": "Custom View",
+    "title": "Custom View",
     "content": "KDRS Search &amp; View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use custom views for the advanced stuff. This allows for readability in the community. ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view",
     
     "relUrl": "/docs/custom-view"
   },"5": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Table of Contents",
-    "content": ". | Ruby Template | Make a new file for the view | Reference the view from xml | Minimum template | Data | Html | ERB - Embedded Ruby | CSS | . ",
+    "content": ". | Custom View | Make a new file for the view | Reference the view from xml | Minimum template | Data | Html | ERB - Embedded Ruby | CSS | . ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#table-of-contents",
     
     "relUrl": "/docs/custom-view#table-of-contents"
   },"6": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Make a new file for the view",
     "content": "In the vendor/your_system/ directory on your host, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the ruby server will process the file first, then the html engine. /var/kdrs/innsyn/vendor/school_system/_diploma.html.erb . ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#make-a-new-file-for-the-view",
     
     "relUrl": "/docs/custom-view#make-a-new-file-for-the-view"
   },"7": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Reference the view from xml",
     "content": "The program flow will be redirected to this view. You will be in control of the presentation. &lt;table&gt; &lt;customview&gt;diploma&lt;/customview&gt; . ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#reference-the-view-from-xml",
     
     "relUrl": "/docs/custom-view#reference-the-view-from-xml"
   },"8": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Minimum template",
     "content": "&lt;!-- DATA PREPARATION --&gt; &lt;% # Your data will be in the @docs variable # Adjust your data as needed before presentation %&gt; &lt;!-- DATA PRESENTATION --&gt; &lt;%= render 'table', vi: @vi, ti: @ti %&gt; . This view template will generate the same view as the default template. The difference is that you can manipulate the data as needed, and change the presentation with new styling, headings, extra text, tables etc. Maybe you want some different layout on print. This and more you can change from here. ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#minimum-template",
     
     "relUrl": "/docs/custom-view#minimum-template"
   },"9": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Data",
     "content": "The data from xml will be available to the view in the @docs variable. If you need more data from other tables, you can fetch those here. See the examples for how this is done. ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#data",
     
     "relUrl": "/docs/custom-view#data"
   },"10": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "Html",
     "content": "You can write plain html in this file . &lt;h1&gt;Hello, there!&lt;/h1&gt; . ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#html",
     
     "relUrl": "/docs/custom-view#html"
   },"11": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "ERB - Embedded Ruby",
     "content": "You can write plain Ruby in this file, as long as you use the brackets. &lt;% Ruby here %&gt; . You can manipulate data in the background, or do some fancy things with the html code. &lt;% 5.times do %&gt; &lt;h1&gt;Hello, there!&lt;/h1&gt; &lt;% end %&gt; . ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#erb---embedded-ruby",
     
     "relUrl": "/docs/custom-view#erb---embedded-ruby"
   },"12": {
-    "doc": "Ruby Template",
+    "doc": "Custom View",
     "title": "CSS",
     "content": "You can style your data with css, or adjust margins . &lt;style&gt; .my-style { background-color: lightgray; font-size: larger; /* vscode editor will help suggest what to write here */ /* you can also use chatgpt to write css */ } &lt;/style&gt; . Note: You can use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and community sharing. ",
     "url": "/test-kdrs-innsyn-docs/docs/custom-view#css",
@@ -92,7 +92,7 @@
   },"13": {
     "doc": "customview",
     "title": "customview",
-    "content": "You can make a custom view if you want advanced layout or features. Make a file e.g. vendor/school_app/_diploma.html.erb You can edit both the data and the presentation. See section “Ruby Template” in documentation. &lt;table&gt; &lt;customview&gt;diploma&lt;/customview&gt; . Data from the xml file will be available in @docs . ",
+    "content": "You can make a custom view if you want advanced layout or features. Make a file e.g. vendor/school_app/_diploma.html.erb You can edit both the data and the presentation. See section “Custom View” in documentation. &lt;table&gt; &lt;customview&gt;diploma&lt;/customview&gt; . Data from the xml file will be available in @docs . ",
     "url": "/test-kdrs-innsyn-docs/docs/default-view/customview/",
     
     "relUrl": "/docs/default-view/customview/"
