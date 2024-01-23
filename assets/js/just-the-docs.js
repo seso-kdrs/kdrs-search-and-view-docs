@@ -77,7 +77,7 @@ function disableHeadStyleSheets() {
 
 function initSearch() {
   var request = new XMLHttpRequest();
-  request.open('GET', '/search-and-view-docs/assets/js/search-data.json', true);
+  request.open('GET', '/kdrs-search-and-view-docs/assets/js/search-data.json', true);
 
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
@@ -456,7 +456,7 @@ jtd.getTheme = function() {
 
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
-  cssFile.setAttribute('href', '/search-and-view-docs/assets/css/just-the-docs-' + theme + '.css');
+  cssFile.setAttribute('href', '/kdrs-search-and-view-docs/assets/css/just-the-docs-' + theme + '.css');
 }
 
 // Note: pathname can have a trailing slash on a local jekyll server
