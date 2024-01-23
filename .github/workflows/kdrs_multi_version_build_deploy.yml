@@ -10,7 +10,7 @@ permissions:
   contents: write
 env:
   kdrsInnsynDocVersionPath: /
-  baseurl: /search-and-view-docs/
+  baseurl: /kdrs-search-and-view-docs/
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

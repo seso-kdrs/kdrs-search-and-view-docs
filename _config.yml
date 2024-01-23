@@ -15,9 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: KDRS Search & View
 description: Documentation for KDRS Search & View
-baseurl: "/search-and-view-docs/" #baseurl is overwritten at build, because some builds are for specific versions
+baseurl: "/kdrs-search-and-view-docs/" #baseurl is overwritten at build, because some builds are for specific versions
 url: "https://kdrs-sa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: KDRS-SA/search-and-view-docs # for github-metadata
+repository: KDRS-SA/kdrs-search-and-view-docs # for github-metadata
 repoowner: KDRS-SA
 
 permalink: pretty
@@ -144,7 +144,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/KDRS-SA/search-and-view-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/KDRS-SA/kdrs-search-and-view-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
