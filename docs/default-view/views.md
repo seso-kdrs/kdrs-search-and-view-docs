@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: views
-parent: Default View
+parent: XML View
 ---
 Group all the views
 

@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: lookup
-parent: Default View
+parent: XML View
 ---
 Lookup an id in another table, and get one or more other values.
 

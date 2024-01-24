@@ -1,7 +1,7 @@
 ---
 layout: default
 title: examples
-parent: Custom View
+parent: Ruby View
 ---
 
 # Examples

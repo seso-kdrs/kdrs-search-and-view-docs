@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: field
-parent: Default View
+parent: XML View
 ---
 Specifies one field to be edited
 

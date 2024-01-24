@@ -1,7 +1,7 @@
 ---
 layout: default
 title: debug
-parent: Custom View
+parent: Ruby View
 ---
 
 # Debug

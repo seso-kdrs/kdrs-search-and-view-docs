@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: name
-parent: Default View
+parent: XML View
 ---
 Can be used to name a view or a table.
 

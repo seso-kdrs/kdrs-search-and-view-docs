@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: schema
-parent: Default View
+parent: XML View
 ---
 Some large databases are divided into parts called a schema. A table is uniquely referenced by using naming `schema.table`. To simplify table names, it is recommended to assign a default value for schema.
 

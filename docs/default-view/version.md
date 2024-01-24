@@ -1,7 +1,7 @@
 ---
 layout: xml
 title: version
-parent: Default View
+parent: XML View
 ---
 Version is the version of this configuration file. Convention is
 `major.minor.patch` 
