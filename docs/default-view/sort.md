@@ -9,7 +9,6 @@ Example:
 {% highlight xml %}
     <table>
         <sort>lastname</sort> <!-- sorts in ascending order  -->
-        <sort>lastname desc</sort> <!-- sorts in descending order -->
 {% endhighlight %}
 
 Currently you can sort on one column, either in ascending or descending order.
