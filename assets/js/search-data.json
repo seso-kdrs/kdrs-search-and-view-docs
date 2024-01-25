@@ -484,7 +484,7 @@
   },"69": {
     "doc": "sort",
     "title": "sort",
-    "content": "Sort the current page based on the given column. Use the tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; &lt;sort&gt;lastname desc&lt;/sort&gt; &lt;!-- sorts in descending order --&gt; . Currently you can sort on one column, either in ascending or descending order. ",
+    "content": "Sort the current page based on the given column. Use the tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; . Currently you can sort on one column, either in ascending or descending order. ",
     "url": "/kdrs-search-and-view-docs/docs/default-view/sort/",
     
     "relUrl": "/docs/default-view/sort/"
