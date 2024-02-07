@@ -330,7 +330,7 @@
   },"47": {
     "doc": "Part 0: Editing environment",
     "title": "Installing VS Code",
-    "content": ". | First we need Visual Studio Code, a text editor from code by microsoft. You can download VS Code here. | After installing VS Code, open VS Code, then open the following links in a browser and click “Install”. They will then open in the VS Code extension viewer where you have to click “Install” again: . | Remote - SSH - allows for connecting to a remote machine via SSH and editing files directly in VS Code on your local machine. | Remote - SSH: Editing Configuration Files - let’s you easily edit SSH config files in VS Code. Note: Your browser may ask you if you want to open a link in VS Code. Accept this prompt | . | . ",
+    "content": ". | First we need Visual Studio Code, a text editor from code by microsoft. You can download VS Code here. | After installing VS Code, open VS Code, then open the following links in a browser and click “Install”. They will then open in the VS Code extension viewer where you have to click “Install” again (these extensions may be included in VS Code, if you already have them installed you will se an “Uninstall” button instead): . | Remote - SSH - allows for connecting to a remote machine via SSH and editing files directly in VS Code on your local machine. | Remote - SSH: Editing Configuration Files - let’s you easily edit SSH config files in VS Code. Note: Your browser may ask you if you want to open a link in VS Code. Accept this prompt | . | . ",
     "url": "/kdrs-search-and-view-docs/docs/guide/part-0-editing-environment/#installing-vs-code",
     
     "relUrl": "/docs/guide/part-0-editing-environment/#installing-vs-code"
