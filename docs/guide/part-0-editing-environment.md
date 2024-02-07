@@ -15,7 +15,7 @@ However, if you already have a workflow for this that you are comfortable with u
 
 1. First we need Visual Studio Code, a text editor from code by microsoft. You can [download VS Code here.](https://code.visualstudio.com/)
 
-2. After installing VS Code, open VS Code, then open the following links in a browser and click "Install". They will then open in the VS Code extension viewer where you have to click "Install" again:
+2. After installing VS Code, open VS Code, then open the following links in a browser and click "Install". They will then open in the VS Code extension viewer where you have to click "Install" again (these extensions may be included in VS Code, if you already have them installed you will se an "Uninstall" button instead):
     - [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) - allows for connecting to a remote machine via SSH and editing files directly in VS Code on your local machine.
     - [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) - let's you easily edit SSH config files in VS Code.
 <br>
