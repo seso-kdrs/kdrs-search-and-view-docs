@@ -14,7 +14,8 @@ Example:
             <field>semester.gsub("s1","semester 1")</field> <!-- semester 1 instead of s1 -->
             <field>grade.gsub(/^.{0}$/,"---")</field> <!-- If no grade, draw a line -->
             <field>timer.gsub(".0","")</field> <!-- e.g. 5 instead of 5.0  -->
-            <field>location.capitalize</field> <!-- Trondheim instead of trondheim  -->
+            <field>location.capitalize</field> <!-- Trondheim is a city in norway -->
+            <field>location.titleize</field> <!-- Trondheim Is a City in Norway   -->
         </edit>
 {% endhighlight %}
 
