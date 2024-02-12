@@ -13,17 +13,23 @@ Hash containing the data from XML
 {% highlight erb %}
 <%= render 'table', vi: @vi, ti: @ti %>
 {% endhighlight %}
-
+### Example - traversing the docs variable
+{% highlight erb %}
+<%
+    docs.each do |doc|
+      doc["first name"] = doc["first name"].titleize # your code here
+    end
+%>
+{% endhighlight %}
 
 ## @show_fields
-Array of fields to present in the table
-
+Array of fields to present in the table, and their order.
 ### Example - adding and removing fields
 {% highlight erb %}
 <%      
-    @showfields += ["first name", "last name"] # will add to the exising
-    @showfields -= ["first name", "last name"] # will remove these columns
-    @showfields = ["first name", "last name"] # will redefine all visible columns
-    @showfields << "my column"  # a simple way to add just one column
+    @show_fields += ["first name", "last name"] # will add to the exising
+    @show_fields -= ["first name", "last name"] # will remove these
+    @show_fields = ["first name", "last name"] # will redefine all fields and their order
+    @show_fields << "my column"  # a simple way to add just one field
 %>
 {% endhighlight %}

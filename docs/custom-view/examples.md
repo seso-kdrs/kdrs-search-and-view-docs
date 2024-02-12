@@ -66,4 +66,26 @@ end
 %>
 {% endhighlight %}
 
-
+## Make a custom method
+Write out numbers e.g. 3 as "3 tre", D as "Deltatt"
+Returns original string if not found
+{% highlight erb %}
+<% 
+def write_out_grade(str)
+  map = {
+    "1" => "1 en", 
+    "2" => "2 to",
+    "3" => "3 tre", 
+    "4" => "4 fire",
+    "5" => "5 fem", 
+    "6" => "6 seks", 
+    "D" => "Deltatt", 
+    "G" => "God", 
+    "NG" => "Nokså god", 
+    "LG" => "Lite god", 
+    "FU" => "Fullført utdanning",
+    "IM" => "Ikke møtt" }
+  map[str] ? map[str] : str 
+end
+%>
+{% endhighlight %}
