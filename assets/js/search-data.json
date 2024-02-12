@@ -57,7 +57,7 @@
   },"8": {
     "doc": "Ruby View",
     "title": "Minimum template",
-    "content": "&lt;!-- DATA PREPARATION --&gt; &lt;% # Your data will be in the @docs variable # Adjust your data as needed before presentation %&gt; &lt;!-- DATA PRESENTATION --&gt; &lt;%= render 'table', vi: @vi, ti: @ti %&gt; . This view template will generate the same view as the default template. The difference is that you can manipulate the data as needed, and change the presentation with new styling, headings, extra text, tables etc. Maybe you want some different layout on print. This and more you can change from here. ",
+    "content": "&lt;!-- DATA PREPARATION --&gt; &lt;% # Your data will be in the @docs variable # Adjust your data as needed before presentation %&gt; &lt;!-- DATA PRESENTATION --&gt; &lt;%= render 'table', vi: @vi, ti: @ti %&gt; . This view template will generate the same view as the default template. The difference is that you can manipulate the data as needed, and change the presentation with new styling, headings, extra text, tables etc. Maybe you want some different layout on print. This and more you can change from here. Notice the use of '=' to output Ruby on screen . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view#minimum-template",
     
     "relUrl": "/docs/custom-view#minimum-template"
