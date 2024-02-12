@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/custom-view
 ---
 # Ruby View
-KDRS Search & View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use custom views for the advanced stuff. This allows for readability in the community.
+KDRS Search & View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use Ruby views when needed. This allows for readability in the community.
 {: .fs-6 .fw-300 }
 
 # Table of Contents
@@ -49,20 +49,31 @@ The difference is that you can manipulate the data as needed, and change the pre
 # Data
 The data from xml will be available to the view in the `@docs` variable. If you need more data from other tables, you can fetch those here. See the examples for how this is done.
 
+# Columns
+Select the fields you want to show as columns in the view
+{% highlight erb %}
+<% 
+    @show_fields = ["first name", "last name"] 
+    @show_fields  <<  "land"  #alternative syntax 
+%>
+{% endhighlight %}
+
+
+
 # Html
 You can write plain html in this file
 {% highlight html %}
     <h1>Hello, there!</h1>
 {% endhighlight %}
 
-# ERB - Embedded Ruby
+# Ruby
 You can write plain Ruby in this file, as long as you use the brackets.
 {% highlight erb %}
     <% Ruby here %>
 {% endhighlight %}
 
 
-You can manipulate data in the background, or do some fancy things with the html code.
+Ruby can be used to edit the data, or write HTML code, like in this example:
 
 {% highlight erb %}
 <% 5.times do %>
@@ -84,5 +95,5 @@ You can style your data with css, or adjust margins
 </style>
 {% endhighlight %}
 
-Note: You can use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and community sharing.
+Note: It is technically possible use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and code sharing.
 
