@@ -358,7 +358,7 @@
   },"51": {
     "doc": "methods",
     "title": "Join data",
-    "content": "Join two tables. This is similar to using the tag “lookup” in xml . &lt;% @catalog.join_table(main:, fk:, pk:, fl:, table:) %&gt; . | main: the main table (hash) that you want to extend with more data | fk: the foreign key in the main document | pk: the primary key in the new table | table: the lookup table that has additional | . Example: Let each customer have a city . &lt;% customers = @catalog.join_table(main:customers, fk:\"address_id\", pk:id\", table:\"address\", fields:\"city\") %&gt; . ",
+    "content": "Join two tables. This is similar to using the tag “lookup” in xml . &lt;% @catalog.join_table(main:, fk:, pk:, fl:, table:) %&gt; . | main: the main table (hash) that you want to extend with more data | fk: the foreign key in the main document | pk: the primary key in the new table | table: the lookup table that has additional | . Example: Let each customer have a city . &lt;% customers = @catalog.join_table(main:customers, fk:\"address_id\", table:\"address\", pk:id\", fields:\"city\") %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/methods/#join-data",
     
     "relUrl": "/docs/custom-view/methods/#join-data"
