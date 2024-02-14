@@ -16,6 +16,8 @@ Example:
             <field>timer.gsub(".0","")</field> <!-- e.g. 5 instead of 5.0  -->
             <field>location.capitalize</field> <!-- Trondheim is a city in norway -->
             <field>location.titleize</field> <!-- Trondheim Is A City In Norway   -->
+            <field>location.downcase</field> <!-- trondheim is a city in norway -->
+            <field>location.upcase</field> <!-- TRONDHEIM IS A CITY IN NORWAY -->
         </edit>
 {% endhighlight %}
 
