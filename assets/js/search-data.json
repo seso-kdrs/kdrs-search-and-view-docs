@@ -351,14 +351,14 @@
   },"50": {
     "doc": "methods",
     "title": "Get data",
-    "content": "&lt;% get_table(table, criteria,fl:,filter:nil,page:1, rows:DEFAULT_ROWS) %&gt; . | fl: fields to retrieve | criteria: Hash of criteria e.g. {school:”fro”, class:”3a”, year:”2001”} | criteria can also be a set of space separated values, e.g. COURSECODE:”1 2 3” or [] for empty | Returns empty array [] if no hits | . Example . &lt;% diploma = get_table(\"diploma\", {student_id:\"123456\"}, fields:\"absence, school, date, location\") %&gt; . ",
+    "content": "&lt;% @catalog.get_table(table, criteria,fl:,filter:nil,page:1, rows:DEFAULT_ROWS) %&gt; . | fl: fields to retrieve | criteria: Hash of criteria e.g. {school:”fro”, class:”3a”, year:”2001”} | criteria can also be a set of space separated values, e.g. COURSECODE:”1 2 3” or [] for empty | Returns empty array [] if no hits | . Example . &lt;% diploma = @catalog.get_table(\"diploma\", {student_id:\"123456\"}, fields:\"absence, school, date, location\") %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/methods/#get-data",
     
     "relUrl": "/docs/custom-view/methods/#get-data"
   },"51": {
     "doc": "methods",
     "title": "Join data",
-    "content": "Join two tables. This is similar to using the tag “lookup” in xml . &lt;% join_table(main:, fk:, pk:, fl:, table:) %&gt; . | main: the main table (hash) that you want to extend with more data | fk: the foreign key in the main document | pk: the primary key in the new table | table: the lookup table that has additional | . Example: Let each customer have a city . &lt;% customers = join_table(main:customers, fk:\"address_id\", pk:id\", table:\"address\", fields:\"city\") %&gt; . ",
+    "content": "Join two tables. This is similar to using the tag “lookup” in xml . &lt;% @catalog.join_table(main:, fk:, pk:, fl:, table:) %&gt; . | main: the main table (hash) that you want to extend with more data | fk: the foreign key in the main document | pk: the primary key in the new table | table: the lookup table that has additional | . Example: Let each customer have a city . &lt;% customers = @catalog.join_table(main:customers, fk:\"address_id\", pk:id\", table:\"address\", fields:\"city\") %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/methods/#join-data",
     
     "relUrl": "/docs/custom-view/methods/#join-data"
