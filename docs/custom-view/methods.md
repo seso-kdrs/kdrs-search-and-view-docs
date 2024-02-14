@@ -17,7 +17,7 @@ These are the available methods for getting and joining data
 
 ### Example: Get customers
 {% highlight erb %}
-<% customers = @catalog.get_table("customers", {active:"true"}, fields:"first_name, last_name, email, address_id") %>
+<% customers = @catalog.get_table("customers", {active:"true"}, fields:"name, email, address_id") %>
 {% endhighlight %}
 
 ## Join data
