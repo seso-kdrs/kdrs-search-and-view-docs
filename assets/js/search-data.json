@@ -351,7 +351,7 @@
   },"50": {
     "doc": "methods",
     "title": "Get data",
-    "content": "&lt;% @catalog.get_table(table, criteria,fl:,filter:nil,page:1, rows:DEFAULT_ROWS) %&gt; . | fl: fields to retrieve | criteria: Hash of criteria e.g. {school:”fro”, class:”3a”, year:”2001”} | criteria can also be a set of space separated values, e.g. COURSECODE:”1 2 3” or [] for empty | Returns empty array [] if no hits | . Example: Get customers . &lt;% customers = @catalog.get_table(\"customers\", {active:\"true\"}, fields:\"first_name, last_name, email\") %&gt; . ",
+    "content": "&lt;% @catalog.get_table(table, criteria,fl:,filter:nil,page:1, rows:DEFAULT_ROWS) %&gt; . | fl: fields to retrieve | criteria: Hash of criteria e.g. {school:”fro”, class:”3a”, year:”2001”} | criteria can also be a set of space separated values, e.g. COURSECODE:”1 2 3” or [] for empty | Returns empty array [] if no hits | . Example: Get customers . &lt;% customers = @catalog.get_table(\"customers\", {active:\"true\"}, fields:\"first_name, last_name, email, address_id\") %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/methods/#get-data",
     
     "relUrl": "/docs/custom-view/methods/#get-data"
