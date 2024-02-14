@@ -33,6 +33,6 @@ Join two tables. This is similar to using the tag "lookup" in xml
 
 ### Example: Let each customer have a city
 {% highlight erb %}
-<% customers = @catalog.join_table(main:customers, fk:"address_id", pk:id", table:"address", fields:"city") %>
+<% customers = @catalog.join_table(main:customers, fk:"address_id", table:"address", pk:id", fields:"city") %>
 {% endhighlight %}
 
