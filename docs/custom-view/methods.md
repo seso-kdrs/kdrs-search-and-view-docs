@@ -17,7 +17,7 @@ These are the available methods for getting and joining data
 
 ### Example
 {% highlight erb %}
-<% diploma = @catalog.get_table("diploma", {student_id:"123456"}, fields:"absence, school, date, location") %>
+<% customers = @catalog.get_table("customers", {active:"true"}, fields:"first_name, last_name, email") %>
 {% endhighlight %}
 
 ## Join data
