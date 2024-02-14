@@ -15,7 +15,7 @@ These are the available methods for getting and joining data
 - criteria can also be a set of space separated values, e.g. COURSECODE:"1 2 3" or [] for empty
 - Returns empty array [] if no hits
 
-### Example
+### Example: Get customers
 {% highlight erb %}
 <% customers = @catalog.get_table("customers", {active:"true"}, fields:"first_name, last_name, email") %>
 {% endhighlight %}
