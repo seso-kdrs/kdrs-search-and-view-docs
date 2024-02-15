@@ -204,28 +204,28 @@
   },"29": {
     "doc": "examples",
     "title": "Add a new column for full name",
-    "content": "Make a new column that combines first name and last name . &lt;% docs.each do |doc| doc[\"full name\"] = doc[\"first name\"] + \" \" + doc[\"last name\"] end @show_fields &lt;&lt; \"full name\" %&gt; . ",
+    "content": "Make a new column that combines first name and last name . &lt;% @docs.each do |doc| doc[\"full name\"] = doc[\"first name\"] + \" \" + doc[\"last name\"] end @show_fields &lt;&lt; \"full name\" %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/examples/#add-a-new-column-for-full-name",
     
     "relUrl": "/docs/custom-view/examples/#add-a-new-column-for-full-name"
   },"30": {
     "doc": "examples",
     "title": "Provide an alternative value",
-    "content": "Show the student grade if it exists, or show a dashed line if its missing . &lt;% docs.each do |doc| doc[\"grade\"] ||= \"-----\" end @show_fields &lt;&lt; \"full name\" %&gt; . ",
+    "content": "Show the student grade if it exists, or show a dashed line if its missing . &lt;% @docs.each do |doc| doc[\"grade\"] ||= \"-----\" end @show_fields &lt;&lt; \"full name\" %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/examples/#provide-an-alternative-value",
     
     "relUrl": "/docs/custom-view/examples/#provide-an-alternative-value"
   },"31": {
     "doc": "examples",
     "title": "Use the first part of the string",
-    "content": "E.g. remove time from the string 12.02.2024 11:00 . &lt;% docs.each do |doc| doc[\"date\"] = doc[\"date\"][0..9] end %&gt; . ",
+    "content": "E.g. remove time from the string 12.02.2024 11:00 . &lt;% @docs.each do |doc| doc[\"date\"] = doc[\"date\"][0..9] end %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/examples/#use-the-first-part-of-the-string",
     
     "relUrl": "/docs/custom-view/examples/#use-the-first-part-of-the-string"
   },"32": {
     "doc": "examples",
     "title": "Convert utc date to local time zone",
-    "content": "We make a custom method, and use this in the documents loop. def utc_to_local_time(date) Date.parse(date).in_time_zone('Europe/Oslo') end &lt;% docs.each do |doc| doc[\"date\"] = utc_to_local_time(doc[\"date\"]) end %&gt; . ",
+    "content": "We make a custom method, and use this in the documents loop. def utc_to_local_time(date) Date.parse(date).in_time_zone('Europe/Oslo') end &lt;% @docs.each do |doc| doc[\"date\"] = utc_to_local_time(doc[\"date\"]) end %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/examples/#convert-utc-date-to-local-time-zone",
     
     "relUrl": "/docs/custom-view/examples/#convert-utc-date-to-local-time-zone"
