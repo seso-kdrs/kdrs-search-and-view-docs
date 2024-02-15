@@ -582,7 +582,7 @@
   },"83": {
     "doc": "variables",
     "title": "@docs",
-    "content": "Hash containing the data from XML . Example - display the @docs variable . &lt;%= render 'table', vi: @vi, ti: @ti %&gt; . Example - traversing the docs variable . &lt;% docs.each do |doc| doc[\"first name\"] = doc[\"first name\"].titleize # your code here end %&gt; . ",
+    "content": "Hash containing the data from XML . Example - display the @docs variable . &lt;%= render 'table', vi: @vi, ti: @ti %&gt; . Example - traversing the docs variable . &lt;% @docs.each do |doc| doc[\"first name\"] = doc[\"first name\"].titleize # your code here end %&gt; . ",
     "url": "/kdrs-search-and-view-docs/docs/custom-view/variables/#docs",
     
     "relUrl": "/docs/custom-view/variables/#docs"
