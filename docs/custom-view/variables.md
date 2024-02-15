@@ -16,7 +16,7 @@ Hash containing the data from XML
 ### Example - traversing the docs variable
 {% highlight erb %}
 <%
-    docs.each do |doc|
+    @docs.each do |doc|
       doc["first name"] = doc["first name"].titleize # your code here
     end
 %>
