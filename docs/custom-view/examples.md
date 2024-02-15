@@ -25,7 +25,7 @@ These are som frequently used code snippets for the custom view.
 Make a new column that combines first name and last name
 {% highlight erb %}
 <%
-    docs.each do |doc|
+    @docs.each do |doc|
       doc["full name"] = doc["first name"] + " " + doc["last name"]
     end
     @show_fields << "full name"
@@ -36,7 +36,7 @@ Make a new column that combines first name and last name
 Show the student grade if it exists, or show a dashed line if its missing
 {% highlight erb %}
 <%
-    docs.each do |doc|
+    @docs.each do |doc|
       doc["grade"] ||= "-----"
     end
     @show_fields << "full name"
@@ -47,7 +47,7 @@ Show the student grade if it exists, or show a dashed line if its missing
 E.g. remove time from the string 12.02.2024 11:00
 {% highlight erb %}
 <%
-    docs.each do |doc|
+    @docs.each do |doc|
       doc["date"] = doc["date"][0..9]
     end
 %>
@@ -60,7 +60,7 @@ def utc_to_local_time(date)
     Date.parse(date).in_time_zone('Europe/Oslo')
 end
 <%
-    docs.each do |doc|
+    @docs.each do |doc|
       doc["date"] = utc_to_local_time(doc["date"])
     end
 %>
