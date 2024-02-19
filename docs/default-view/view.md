@@ -10,7 +10,7 @@ Example:
     <views>
         <view>
             <name>grades</name>
-            <tables>
-                <table>
+            <table>
+                ...
 {% endhighlight %}
 
