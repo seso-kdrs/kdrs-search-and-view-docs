@@ -19,3 +19,9 @@ Other fields must preceed this field as shown.
 {% endhighlight %}
 
 
+Within the `<table>` tag, there are 4 required tags. These are:
+- [`<name>`](../name)
+- [`<heading>`](../heading)
+- [`<primarykey>`](../primarykey)
+- [`<fields>`](../fields)
+
