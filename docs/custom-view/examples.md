@@ -17,7 +17,7 @@ These are som frequently used code snippets for the custom view.
 
 ## Display the main table
 {% highlight erb %}
-<%= render 'table', vi: @vi, ti: @ti %>
+<%= render 'table' %>
 {% endhighlight %}
 - Will write the content of variable `@docs` that come from xml
 
