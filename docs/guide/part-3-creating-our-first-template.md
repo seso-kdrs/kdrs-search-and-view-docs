@@ -13,20 +13,18 @@ XML templates are stored in the `vendor` folder where KDRS Innsyn is stored. The
 
 2. Now we will fill the file with the bare minium to make it display something in KDRS innsyn:
 {% highlight xml %}
-<root>
-    <views>
-        <view>
-            <name>Den beste visningen</name>
-        </view>
-    </views>
-</root>
+<views>
+    <view>
+        <name>Den beste visningen</name>
+    </view>
+</views>
 {% endhighlight %}
 *You can choose whatever you want for the name*\
 \
 This creates a new "View" for our database, which is a collection of tables. We will add the tables later.
 
 {: style="counter-reset: step-counter 2;" }
-3. Now we need the UUID of our database. It is found in the top left of the database overview in DBPTK. Copy this ID for the next step (without the enclosing parentheses).\
+1. Now we need the UUID of our database. It is found in the top left of the database overview in DBPTK. Copy this ID for the next step (without the enclosing parentheses).\
 <br>
 ![](../../../assets/images/guide/uuid.png)
 

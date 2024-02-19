@@ -11,7 +11,8 @@ The last feature we will add to our template is a new tab that applies a filter.
 
 {% highlight xml %}
 ...
-<tables>
+<view>
+    <name>Den beste visningen</name>
     <table> <!-- Our original table showing all films -->
         <name>film</name>
         <parent>top</parent> <!-- "top" is commonly used to group tables at the top of the hierarchy (no parent tables) -->
@@ -52,7 +53,7 @@ Now we can see a new tab appear, which will also list every film.\
 ![](../../../assets/images/guide/table-5.png)
 
 {: style="counter-reset: step-counter 1;" }
-2. Now we need to add a `<filter>` tag to our new table. This tag uses SolR queries, and we can use a [Range Search](https://solr.apache.org/guide/6_6/the-standard-query-parser.html#TheStandardQueryParser-RangeSearches) to filter by the films which have a `length` less than or equal to 60. The syntax for this is `length: [* TO 60]`. Add this within a `<filter>` tag in the new table.
+1. Now we need to add a `<filter>` tag to our new table. This tag uses SolR queries, and we can use a [Range Search](https://solr.apache.org/guide/6_6/the-standard-query-parser.html#TheStandardQueryParser-RangeSearches) to filter by the films which have a `length` less than or equal to 60. The syntax for this is `length: [* TO 60]`. Add this within a `<filter>` tag in the new table.
 
 {% highlight xml %}
 ...

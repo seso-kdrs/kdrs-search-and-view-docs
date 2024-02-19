@@ -18,20 +18,18 @@ Now we have a list of films, but lets expand it a bit. It could be useful to sho
 3. Lets define a new child table in our XML template. This will be done similarily to the first table, but we need 2 extra tags: `<parent>`, which is the name of the parent table, and as mentioned `<foreignkey>`, which will be matched against the primary key of the parent table.
 {% highlight xml %}
 ...
-<tables>
-    <table>
-        <name>film</name>
-        [...] <!-- Part of our first table omitted to keep the text shorter -->
-    </table>                
-    <table> <!-- Our new child table -->
-        <name>film_actor</name>
-        <heading>Skuespillerliste</heading>
-        <primarykey>film_id</primarykey>
-        <fields>actor_id</fields>
-        <parent>film</parent>                    
-        <foreignkey>film_id</foreignkey>    
-    </table>
-</tables>
+<table>
+    <name>film</name>
+    [...] <!-- Part of our first table omitted to keep the text shorter -->
+</table>                
+<table> <!-- Our new child table -->
+    <name>film_actor</name>
+    <heading>Skuespillerliste</heading>
+    <primarykey>film_id</primarykey>
+    <fields>actor_id</fields>
+    <parent>film</parent>                    
+    <foreignkey>film_id</foreignkey>    
+</table>
 ...
 {% endhighlight %}
 
@@ -40,7 +38,7 @@ Our child table now looks like this:\
 ![](../../../assets/images/guide/child-table-1.png)
 
 {: style="counter-reset: step-counter 3;" }
-4. The child actor table is still very barebones, so let's improve it by using some previously learned techniques to replace the IDs with names using `<lookup>` and change the column header using `as`.
+1. The child actor table is still very barebones, so let's improve it by using some previously learned techniques to replace the IDs with names using `<lookup>` and change the column header using `as`.
 {% highlight xml %}
 ...
 <table>

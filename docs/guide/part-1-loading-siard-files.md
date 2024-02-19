@@ -6,8 +6,9 @@ parent: Guide
 ---
 Uploading of SIARD files is done in DBPTK (Database Preservation Toolkit), which interprets SIARD files and loads the data into a modern database system that can be used by KDRS Innsyn.
 
-1. Access DBPTK by using your browser and navigating to the web address KDRS Innsyn runs on followed by `:8081`.\
-For example, as our server has the address `innsyn.detbestearkivet.no` we would have to navigate to `innsyn.detbestearkivet.no:8081`
+1. Access DBPTK by using your browser and navigating to the web address KDRS Innsyn runs on followed by `:8080`.\
+For example, as our server has the address `innsyn.detbestearkivet.no` we would have to navigate to `innsyn.detbestearkivet.no:8080`.\
+*Note: The default port is 8080, but it is possible this has been changed for your installation.*
 
 2. Click "LOAD SIARD FILE"\
 <br>
