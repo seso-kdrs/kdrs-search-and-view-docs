@@ -89,3 +89,15 @@ def write_out_grade(str)
 end
 %>
 {% endhighlight %}
+
+## Merge columns
+Example of merging two columns
+{% highlight erb %}
+<%
+  @docs.each do |doc|
+      doc["name"] = doc["first_name"] + doc["last_name"]
+  show_fields << "name" # show_fields is an array of column names that will be displayed, so we need to add our new column "name"
+  show_fields -= ["first_name", "last_name"] # Remove the columns for first and last name, so they will not be shown.
+%>
+<%= render 'table' %> 
+{% endhighlight %}
