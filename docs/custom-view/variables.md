@@ -11,7 +11,7 @@ These are the available variables
 Hash containing the data from XML
 ### Example - display the @docs variable
 {% highlight erb %}
-<%= render 'table', vi: @vi, ti: @ti %>
+<%= render 'table'  %>
 {% endhighlight %}
 ### Example - traversing the docs variable
 {% highlight erb %}

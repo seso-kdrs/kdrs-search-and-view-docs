@@ -40,7 +40,7 @@ The program flow will be redirected to this view. You will be in control of the 
 %>
 
 <!-- DATA PRESENTATION -->
-<%= render 'table', vi: @vi, ti: @ti %>
+<%= render 'table' %>
 {% endhighlight %}
 
 This view template will generate the same view as the default template.
