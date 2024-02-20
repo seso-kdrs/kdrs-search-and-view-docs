@@ -32,10 +32,6 @@ jobs:
           source: ./
           destination: _site
 
-      - name: Upload artifact
-        if: ${{ env.latest_branch == github.ref_name }} 
-        uses: actions/upload-pages-artifact@v3
-
       - name: Deploy to root if this is the most recent version
         if: ${{ env.latest_branch == github.ref_name }} 
         uses: JamesIves/github-pages-deploy-action@v4.3.1
@@ -59,9 +55,6 @@ jobs:
         with:
           source: ./
           destination: _site
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
 
       - name: Deploy to versions
         uses: JamesIves/github-pages-deploy-action@v4.3.1
