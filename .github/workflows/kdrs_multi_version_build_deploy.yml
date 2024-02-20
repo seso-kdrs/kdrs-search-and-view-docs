@@ -2,22 +2,23 @@ name: Publish to GH Pages
 on:
   push:
     branches:
-      - master
-  release:
-    types:
-      - published
+      - '[0-9]*.[0-9]*.[0-9]*' # Match version names x.y.z. This is not regex supported so it would match 1ab.2bc.3asd, but not preview/1.2.3
 permissions:
   contents: write
 env:
   kdrsInnsynDocVersionPath: /
   baseurl: /kdrs-search-and-view-docs/
+  latest_branch: x.y.z
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Update kdrsInnsynDocVersionPath for releases
-        if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: echo kdrsInnsynDocVersionPath=/version/$(echo $GITHUB_REF | cut -d / -f 3 | cut -d v -f 2- | cut -d . -f 1,2) >> $GITHUB_ENV
+        # We only want the most recent version to be deployed to root, so find the most recent version
+      - name: Find most recent version
+        run: |
+          git fetch --all
+          # get all branches, filter matching origin/x.y.z where xyz are integers, remove origin, sort by version, only get last which is most recent, remove space
+          echo latest_branch=$(git branch -r | grep -E 'origin/([0-9]+)\.([0-9]+)\.([0-9]+)$' | sed 's|origin/||' | sort -V | tail -n1 | tr -d '[:space:]') >> $GITHUB_ENV
 
       # - name: Update kdrsInnsynDocVersionPath for non-main branches
       #   if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
@@ -40,15 +41,28 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-      - name: Deploy 🚀
+      - name: Deploy to versions
         uses: JamesIves/github-pages-deploy-action@v4.3.1
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: _site # The folder the action should deploy.
-          target-folder: ${{ env.kdrsInnsynDocVersionPath }}
+          target-folder: /version/${{github.ref_name}}
+          clean: true # Automatically remove deleted files from the deploy branch
+          clean-exclude: |
+            !/version/${{github.ref_name}}
+      
+      - name: Deploy to root if this is the most recent version
+        if: ${{ env.latest_branch == github.ref_name }} 
+        uses: JamesIves/github-pages-deploy-action@v4.3.1
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _site # The folder the action should deploy.
+          target-folder: /
           clean: true # Automatically remove deleted files from the deploy branch
           clean-exclude: |
             version/*
+            
+      
     
   # deploy:
   #   permissions:
