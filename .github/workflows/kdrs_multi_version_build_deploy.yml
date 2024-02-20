@@ -6,7 +6,6 @@ on:
 permissions:
   contents: write
 env:
-  kdrsInnsynDocVersionPath: /
   baseurl: /kdrs-search-and-view-docs/
   latest_branch: x.y.z
 jobs:
@@ -23,14 +22,37 @@ jobs:
           # get all branches, filter matching origin/x.y.z where xyz are integers, remove origin, sort by version, only get last which is most recent, remove space
           echo latest_branch=$(git branch -r | grep -E 'origin/([0-9]+)\.([0-9]+)\.([0-9]+)$' | sed 's|origin/||' | sort -V | tail -n1 | tr -d '[:space:]') >> $GITHUB_ENV
 
-      # - name: Update kdrsInnsynDocVersionPath for non-main branches
-      #   if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
-      #   run: echo kdrsInnsynDocVersionPath=/preview >> $GITHUB_ENV
+      # ---------------------------------------------------------
+      # BUILD AND DEPLOY TO ROOT. This part only runs if the branch pushed to is the latest version.  
+      # ---------------------------------------------------------
+      - name: Build with Jekyll
+        if: ${{ env.latest_branch == github.ref_name }} 
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: _site
 
-      - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite baseurl with version
+      - name: Upload artifact
+        if: ${{ env.latest_branch == github.ref_name }} 
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to root if this is the most recent version
+        if: ${{ env.latest_branch == github.ref_name }} 
+        uses: JamesIves/github-pages-deploy-action@v4.3.1
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _site # The folder the action should deploy.
+          target-folder: /
+          clean: true # Automatically remove deleted files from the deploy branch
+          clean-exclude: |
+            version/*
+      # ---------------------------------------------------------    
+      # BUILD AND DEPLOY TO /version/x.y.z. This part always runs.
+      # ---------------------------------------------------------
+      - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite jekyll baseurl with (baseurl)/version/x.y.z
         run: |
           echo '' >> _config.yml
-          echo baseurl: $(echo '${{env.baseurl}}' | cut -d / -f 1,2)${{env.kdrsInnsynDocVersionPath}} >> _config.yml
+          echo baseurl: $(echo '${{env.baseurl}}' | cut -d / -f 1,2)/version/${{github.ref_name}} >> _config.yml
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -50,17 +72,8 @@ jobs:
           clean: true # Automatically remove deleted files from the deploy branch
           clean-exclude: |
             !/version/${{github.ref_name}}
-      
-      - name: Deploy to root if this is the most recent version
-        if: ${{ env.latest_branch == github.ref_name }} 
-        uses: JamesIves/github-pages-deploy-action@v4.3.1
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: _site # The folder the action should deploy.
-          target-folder: /
-          clean: true # Automatically remove deleted files from the deploy branch
-          clean-exclude: |
-            version/*
+
+
             
       
     
