@@ -13,6 +13,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
         # We only want the most recent version to be deployed to root, so find the most recent version
       - name: Find most recent version
         run: |
@@ -23,9 +26,6 @@ jobs:
       # - name: Update kdrsInnsynDocVersionPath for non-main branches
       #   if: ${{ github.ref_type == 'branch' && github.ref_name != 'master'}}
       #   run: echo kdrsInnsynDocVersionPath=/preview >> $GITHUB_ENV
-
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
 
       - name: Set baseurl # To make versions have hyperlinks relative to their directories, overwrite baseurl with version
         run: |
