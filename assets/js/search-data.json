@@ -309,7 +309,7 @@
   },"44": {
     "doc": "Home",
     "title": "Home",
-    "content": "CI test: 8.8.8 . ",
+    "content": "ci test 1000 . ",
     "url": "/kdrs-search-and-view-docs/",
     
     "relUrl": "/"
