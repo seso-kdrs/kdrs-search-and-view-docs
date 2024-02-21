@@ -2,7 +2,7 @@ name: Publish to GH Pages
 on:
   push:
     branches:
-      - '[0-9]*.[0-9]*.[0-9]*' # Match version names x.y.z. This is not regex supported so it would match 1ab.2bc.3asd, but not preview/1.2.3
+      - '[0-9]*.[0-9]*' # Match version names x*.y*. This is not regex supported so it would match 1ab.2bc.3asd, but not preview/1.2.3
 permissions:
   contents: write
 env:
